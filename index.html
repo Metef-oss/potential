@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POTENTIAL Esports</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f1015;
+            color: #e1e1e6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* Hlavička */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo-img {
+            max-width: 260px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(69, 243, 255, 0.15);
+        }
+
+        /* Sekce */
+        .section-title {
+            font-size: 1.8rem;
+            color: #fff;
+            margin: 20px 0 25px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #00bfff;
+            padding-bottom: 8px;
+            width: 100%;
+            max-width: 1140px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        /* Roster Grid (NAVI styl) */
+        .roster-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1140px;
+            width: 100%;
+        }
+
+        .player-card {
+            background: #181920;
+            width: 175px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            transition: transform 0.2s;
+        }
+
+        .player-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Horní část se siluetou image_2721d6.png */
+        .player-img-container {
+            width: 100%;
+            height: 160px;
+            background: #22232b;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .player-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Dolní textový blok */
+        .player-info {
+            padding: 15px 10px;
+            text-align: center;
+            background: #13141a;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .player-nick-row {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .flag {
+            font-size: 1.1rem;
+        }
+
+        .player-role {
+            font-size: 0.8rem;
+            color: #00bfff;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .player-age {
+            font-size: 0.75rem;
+            color: #71717a;
+            margin-bottom: 12px;
+        }
+
+        /* Odkazy na profily */
+        .player-links {
+            display: flex;
+            gap: 6px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 6px 0;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 3px;
+            text-transform: uppercase;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        .btn-steam {
+            background: #24252f;
+            color: #fff;
+        }
+        .btn-steam:hover { background: #333543; }
+
+        .btn-faceit {
+            background: #ff5500;
+            color: #fff;
+        }
+        .btn-faceit:hover { background: #ff661a; }
+
+        /* Odlišení pro Coache */
+        .coach-card .player-role { color: #ffa500; }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.8rem;
+            color: #4f505e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="header">
+        <img src="Potential V 1.0.jpg" alt="Potential Esports Logo" class="logo-img">
+    </div>
+
+    <!-- Tým Roster -->
+    <h2 class="section-title">Týmová Sestava</h2>
+    <div class="roster-grid">
+
+        <!-- Metef_ -->
+        <div class="player-card">
+            <div class="player-img-container">
+                <img src="image_2721d6.png" alt="Metef_" class="player-img">
+            </div>
+            <div class="player-info">
+                <div>
+                    <div class="player-nick-row"><span class="flag">🇨🇿</span> Metef_</div>
+                    <div class="player-role">Rifler</div>
+                </div>
+                <div class="player-age">16 years old</div>
+                <div class="player-links">
+                    <a href="https://steamcommunity.com/profiles/76561199220874697/" target="_blank" class="btn btn-steam">Steam</a>
+                    <a href="https://www.faceit.com/en/players/Metef" target="_blank" class="btn btn-faceit">Faceit</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- trpak -->
+        <div class="player-card">
+            <div class="player-img-container">
+                <img src="image_2721d6.png" alt="trpak" class="player-img">
+            </div>
+            <div class="player-info">
+                <div>
+                    <div class="player-nick-row"><span class="flag">🇨🇿</span> trpak</div>
+                    <div class="player-role">AWP</div>
+                </div>
+                <div class="player-age">16 years old</div>
+                <div class="player-links">
+                    <a href="https://steamcommunity.com/profiles/76561199204722040" target="_blank" class="btn btn-steam">Steam</a>
+                    <a href="https://www.faceit.com/en/players/trpak" target="_blank" class="btn btn-faceit">Faceit</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- filvin -->
+        <div class="player-card">
+            <div class="player-img-container">
+                <img src="image_2721d6.png" alt="filvin" class="player-img">
+            </div>
+            <div class="player-info">
+                <div>
+                    <div class="player-nick-row"><span class="flag">🇨🇿</span> filvin</div>
+                    <div class="player-role">Support / IGL</div>
+                </div>
+                <div class="player-age">17 years old</div>
+                <div class="player-links">
+                    <a href="https://steamcommunity.com/profiles/76561199159141307" target="_blank" class="btn btn-steam">Steam</a>
+                    <a href="https://www.faceit.com/en/players/Entropo" target="_blank" class="btn btn-faceit">Faceit</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- zdendiik -->
+        <div class="player-card">
+            <div class="player-img-container">
+                <img src="image_2721d6.png" alt="zdendiik" class="player-img">
+            </div>
+            <div class="player-info">
+                <div>
+                    <div class="player-nick-row"><span class="flag">🇨🇿</span> zdendiik</div>
+                    <div class="player-role">Rifler</div>
+                </div>
+                <div class="player-age">16 years old</div>
+                <div class="player-links">
+                    <a href="https://steamcommunity.com/id/ZDENDULAPINDULA" target="_blank" class="btn btn-steam">Steam</a>
+                    <a href="https://www.faceit.com/en/players/Zdeniik" target="_blank" class="btn btn-faceit">Faceit</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- lobz -->
+        <div class="player-card">
+            <div class="player-img-container">
+                <img src="image_2721d6.png" alt="lobz" class="player-img">
+            </div>
+            <div class="player-info">
+                <div>
+                    <div class="player-nick-row"><span class="flag">🇨🇿</span> lobz</div>
+                    <div class="player-role">Lurker</div>
+                </div>
+                <div class="player-age">16 years old</div>
+                <div class="player-links">
+                    <a href="https://steamcommunity.com/id/lobz1" target="_blank" class="btn btn-steam">Steam</a>
+                    <a href="https://www.faceit.com/en/players/lobz_1" target="_blank" class="btn btn-faceit">Faceit</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- nayrox256 (Coach) -->
+        <div class="player-card coach-card">
+            <div class="player-img-container">
+                <img src="image_2721d6.png" alt="nayrox256" class="player-img">
+            </div>
+            <div class="player-info">
+                <div>
+                    <div class="player-nick-row"><span class="flag">🇨🇿</span> nayrox256</div>
+                    <div class="player-role">Coach</div>
+                </div>
+                <div class="player-age">16 years old</div>
+                <div class="player-links">
+                    <a href="https://steamcommunity.com/profiles/7656119809964051" target="_blank" class="btn btn-steam">Steam</a>
+                    <a href="https://www.faceit.com/en/players/Nayrox256" target="_blank" class="btn btn-faceit">Faceit</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 POTENTIAL Esports. Všechna práva vyhrazena.
+    </footer>
+
+</body>
+</html>
+
+     
